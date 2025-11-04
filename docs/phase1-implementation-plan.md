@@ -81,13 +81,13 @@ donor-app-poc/
 ### **Sprint 1: Project Setup & Foundation (Week 1)**
 
 #### ✅ Task 1.1: Initialize Expo Project
-- [ ] Create new Expo 54 project: `npx create-expo-app@latest donor-app-poc --template`
-- [ ] Configure `app.json` with app name, bundle identifier
-- [ ] Set up Expo Router file-based navigation
-- [ ] Configure TypeScript (`tsconfig.json`)
-- [ ] Set up ESLint and Prettier
-- [ ] Create complete folder structure
-- [ ] Initialize Git repository
+- [x] Create new Expo 54 project: `npx create-expo-app@latest donor-app-poc --template`
+- [x] Configure `app.json` with app name, bundle identifier
+- [x] Set up Expo Router file-based navigation
+- [x] Configure TypeScript (`tsconfig.json`)
+- [x] Set up ESLint and Prettier
+- [x] Create complete folder structure
+- [x] Initialize Git repository
 
 **Key Dependencies:**
 ```bash
@@ -98,40 +98,40 @@ npx expo install expo-font expo-splash-screen expo-status-bar
 ```
 
 #### ✅ Task 1.2: Create All Type Definitions
-- [ ] Create all 8 type definition files in `types/` folder
-- [ ] Define enums: Species, Sex, EligibilityStatus, BloodType, AppointmentType, etc.
-- [ ] Define interfaces for all entities
-- [ ] Create `types/index.ts` barrel export
-- [ ] Ensure strict TypeScript configuration
+- [x] Create all 8 type definition files in `types/` folder
+- [x] Define enums: Species, Sex, EligibilityStatus, BloodType, AppointmentType, etc.
+- [x] Define interfaces for all entities
+- [x] Create `types/index.ts` barrel export
+- [x] Ensure strict TypeScript configuration
 
 #### ✅ Task 1.3: Setup Constants & Configuration
-- [ ] Create `constants/Colors.ts` - Define color palette (primary, secondary, success, warning, error)
-- [ ] Create `constants/Sizes.ts` - Spacing scale, font sizes, border radius
-- [ ] Create `constants/Species.ts` - Species-specific data (icons, colors, eligibility criteria)
-- [ ] Create `constants/AppConfig.ts` - App version, API endpoints (mock), feature flags
+- [x] Create `constants/Colors.ts` - Define color palette (primary, secondary, success, warning, error)
+- [x] Create `constants/Sizes.ts` - Spacing scale, font sizes, border radius
+- [x] Create `constants/Species.ts` - Species-specific data (icons, colors, eligibility criteria)
+- [x] Create `constants/AppConfig.ts` - App version, API endpoints (mock), feature flags
 
 ---
 
 ### **Sprint 2: Mock Data & Services (Week 1-2)**
 
 #### ✅ Task 2.1: Create Mock Data Files
-- [ ] `data/mockUsers.ts` - 5 sample users with complete profiles
-- [ ] `data/mockPets.ts` - 15 pets (8 dogs, 5 cats, 2 horses) with varied eligibility
-- [ ] `data/mockFacilities.ts` - 10 facilities across different locations
-- [ ] `data/mockAppointments.ts` - Past, current, and upcoming appointments
-- [ ] `data/mockDonations.ts` - 20+ donation records with complete details
-- [ ] `data/mockEducation.ts` - 10 educational articles
-- [ ] `data/index.ts` - Export all mock data
+- [x] `data/mockUsers.ts` - 5 sample users with complete profiles
+- [x] `data/mockPets.ts` - 15 pets (8 dogs, 5 cats, 2 horses) with varied eligibility
+- [x] `data/mockFacilities.ts` - 10 facilities across different locations
+- [x] `data/mockAppointments.ts` - Past, current, and upcoming appointments
+- [x] `data/mockDonations.ts` - 7 donation records with complete details
+- [x] `data/mockEducation.ts` - 10 educational articles
+- [x] `data/index.ts` - Export all mock data
 
 #### ✅ Task 2.2: Build Service Layer
-- [ ] `services/storage.service.ts` - AsyncStorage wrapper with TypeScript
-- [ ] `services/auth.service.ts` - Login, register, logout (mock)
-- [ ] `services/pet.service.ts` - CRUD operations for pets
-- [ ] `services/eligibility.service.ts` - Questionnaire submission, status calculation
-- [ ] `services/consent.service.ts` - Consent creation, retrieval, PDF generation
-- [ ] `services/appointment.service.ts` - Booking, cancellation, reminders
-- [ ] `services/donation.service.ts` - History retrieval, stats calculation
-- [ ] `services/notification.service.ts` - Local notification scheduling
+- [x] `services/storage.service.ts` - AsyncStorage wrapper with TypeScript
+- [x] `services/auth.service.ts` - Login, register, logout (mock)
+- [x] `services/pet.service.ts` - CRUD operations for pets
+- [x] `services/eligibility.service.ts` - Questionnaire submission, status calculation
+- [x] `services/consent.service.ts` - Consent creation, retrieval, PDF generation
+- [x] `services/appointment.service.ts` - Booking, cancellation, reminders
+- [x] `services/donation.service.ts` - History retrieval, stats calculation
+- [x] `services/notification.service.ts` - Local notification scheduling
 
 **Install:**
 ```bash
@@ -140,12 +140,12 @@ npx expo install expo-notifications
 ```
 
 #### ✅ Task 2.3: Create Custom Hooks
-- [ ] `hooks/useAuth.ts` - Authentication state, login/logout functions
-- [ ] `hooks/usePets.ts` - Pet list, add/edit/delete operations
-- [ ] `hooks/useAppointments.ts` - Appointment management
-- [ ] `hooks/useDonations.ts` - Donation history and stats
-- [ ] `hooks/useNotifications.ts` - Notification permissions and handling
-- [ ] `hooks/useLocation.ts` - Geolocation and distance calculations
+- [x] `hooks/useAuth.ts` - Authentication state, login/logout functions
+- [x] `hooks/usePets.ts` - Pet list, add/edit/delete operations
+- [x] `hooks/useAppointments.ts` - Appointment management
+- [x] `hooks/useDonations.ts` - Donation history and stats
+- [x] `hooks/useNotifications.ts` - Notification permissions and handling
+- [x] `hooks/useLocation.ts` - Geolocation and distance calculations
 
 **Install:**
 ```bash
@@ -153,23 +153,23 @@ npx expo install expo-location
 ```
 
 #### ✅ Task 2.4: Setup Context Providers
-- [ ] `context/AuthContext.tsx` - User state, authentication methods
-- [ ] `context/PetContext.tsx` - Pet management state
-- [ ] `context/AppContext.tsx` - Global app state (loading, errors)
-- [ ] Update `app/_layout.tsx` to wrap with providers
+- [x] `context/AuthContext.tsx` - User state, authentication methods
+- [x] `context/PetContext.tsx` - Pet management state
+- [x] `context/AppContext.tsx` - Global app state (loading, errors)
+- [x] Update `app/_layout.tsx` to wrap with providers
 
 ---
 
 ### **Sprint 3: UI Components Library (Week 2)**
 
 #### ✅ Task 3.1: Base UI Components
-- [ ] `components/ui/Button.tsx` - Primary, secondary, outline, disabled states
-- [ ] `components/ui/Input.tsx` - Text input with validation, error states
-- [ ] `components/ui/Card.tsx` - Container with shadow and padding
-- [ ] `components/ui/Badge.tsx` - Status badges with colors
-- [ ] `components/ui/Modal.tsx` - Bottom sheet and full-screen modals
-- [ ] `components/ui/Loading.tsx` - Spinner and skeleton loaders
-- [ ] `components/ui/EmptyState.tsx` - Empty list placeholders
+- [x] `components/ui/Button.tsx` - Primary, secondary, outline, disabled states
+- [x] `components/ui/Input.tsx` - Text input with validation, error states
+- [x] `components/ui/Card.tsx` - Container with shadow and padding
+- [x] `components/ui/Badge.tsx` - Status badges with colors
+- [x] `components/ui/Modal.tsx` - Bottom sheet and full-screen modals
+- [x] `components/ui/Loading.tsx` - Spinner and skeleton loaders
+- [x] `components/ui/EmptyState.tsx` - Empty list placeholders
 
 **Install:**
 ```bash
@@ -177,11 +177,11 @@ npx expo install react-native-reanimated react-native-gesture-handler
 ```
 
 #### ✅ Task 3.2: Form Components
-- [ ] `components/forms/FormField.tsx` - Wrapper with label, error message
-- [ ] `components/forms/FormSelect.tsx` - Dropdown picker
-- [ ] `components/forms/FormDatePicker.tsx` - Date selection
-- [ ] `components/forms/FormImagePicker.tsx` - Photo upload with preview
-- [ ] `components/forms/FormCheckbox.tsx` - Checkbox with label
+- [x] `components/forms/FormField.tsx` - Wrapper with label, error message
+- [x] `components/forms/FormSelect.tsx` - Dropdown picker
+- [x] `components/forms/FormDatePicker.tsx` - Date selection
+- [x] `components/forms/FormImagePicker.tsx` - Photo upload with preview
+- [x] `components/forms/FormCheckbox.tsx` - Checkbox with label
 
 **Install:**
 ```bash
@@ -189,14 +189,14 @@ npx expo install expo-image-picker @react-native-community/datetimepicker
 ```
 
 #### ✅ Task 3.3: Domain-Specific Components
-- [ ] `components/pet/PetCard.tsx` - Pet list item with photo, name, status
-- [ ] `components/pet/PetAvatar.tsx` - Circular avatar with species icon
-- [ ] `components/pet/EligibilityBadge.tsx` - Color-coded status badge
-- [ ] `components/appointment/AppointmentCard.tsx` - Appointment summary card
-- [ ] `components/appointment/FacilityCard.tsx` - Facility info with map
-- [ ] `components/donation/DonationCard.tsx` - Donation record card
-- [ ] `components/donation/DonationStats.tsx` - Stats dashboard
-- [ ] `components/consent/SignaturePad.tsx` - Digital signature capture
+- [x] `components/pet/PetCard.tsx` - Pet list item with photo, name, status
+- [x] `components/pet/PetAvatar.tsx` - Circular avatar with species icon
+- [x] `components/pet/EligibilityBadge.tsx` - Color-coded status badge
+- [x] `components/appointment/AppointmentCard.tsx` - Appointment summary card
+- [x] `components/appointment/FacilityCard.tsx` - Facility info with map
+- [x] `components/donation/DonationCard.tsx` - Donation record card
+- [x] `components/donation/DonationStats.tsx` - Stats dashboard
+- [x] `components/consent/SignaturePad.tsx` - Digital signature capture
 
 **Install:**
 ```bash
@@ -208,18 +208,18 @@ npx expo install react-native-maps react-native-signature-canvas
 ### **Sprint 4: Authentication & User Profile (Week 3)**
 
 #### ✅ Task 4.1: Authentication Screens
-- [ ] `app/(auth)/login.tsx` - Email/password login with validation
-- [ ] `app/(auth)/register.tsx` - Multi-step registration form
-- [ ] `app/(auth)/_layout.tsx` - Auth stack navigation
-- [ ] Implement form validation with error messages
-- [ ] Add loading states during authentication
-- [ ] Handle authentication errors gracefully
+- [x] `app/auth/login.tsx` - Email/password login with validation
+- [x] `app/auth/register.tsx` - Multi-step registration form
+- [x] `app/auth/_layout.tsx` - Auth stack navigation
+- [x] Implement form validation with error messages
+- [x] Add loading states during authentication
+- [x] Handle authentication errors gracefully
 
 #### ✅ Task 4.2: User Profile
-- [ ] `app/(tabs)/profile.tsx` - Display user information
-- [ ] Add edit profile modal/screen
-- [ ] Emergency contact management
-- [ ] Notification preferences toggle
+- [x] `app/tabs/profile.tsx` - Display user information
+- [x] Add edit profile modal/screen
+- [x] Emergency contact management
+- [x] Notification preferences toggle
 - [ ] Digital signature capture and display
 - [ ] Profile photo upload
 
@@ -234,21 +234,21 @@ npx expo install react-native-maps react-native-signature-canvas
 ### **Sprint 5: Pet Management (Week 3-4)**
 
 #### ✅ Task 5.1: Pet List
-- [ ] `app/(tabs)/pets.tsx` - Display all user's pets
-- [ ] Show eligibility status for each pet
-- [ ] Add floating action button for "Add Pet"
-- [ ] Implement search and filter
-- [ ] Empty state for no pets
+- [x] `app/tabs/pets.tsx` - Display all user's pets
+- [x] Show eligibility status for each pet
+- [x] Add floating action button for "Add Pet"
+- [x] Implement search and filter
+- [x] Empty state for no pets
 
 #### ✅ Task 5.2: Add/Edit Pet Forms
-- [ ] `app/pet/add.tsx` - Multi-step pet registration
+- [x] `app/pet/add.tsx` - Multi-step pet registration
   - Step 1: Basic info (name, species, breed, DOB, sex)
   - Step 2: Physical (weight, color, markings, photo)
   - Step 3: Veterinarian information
-  - Step 4: Medical records upload
+  - Step 4: Review and submit
 - [ ] `app/pet/edit/[id].tsx` - Edit existing pet
 - [ ] Breed autocomplete/search
-- [ ] Photo capture from camera or gallery
+- [x] Photo capture from camera or gallery
 - [ ] Weight history tracking
 
 **Install:**
@@ -257,11 +257,11 @@ npx expo install expo-camera expo-document-picker
 ```
 
 #### ✅ Task 5.3: Pet Detail View
-- [ ] `app/pet/[id].tsx` - Complete pet profile
-- [ ] Display eligibility status prominently
-- [ ] Show donation history summary
-- [ ] Quick actions: Book appointment, View history, Edit
-- [ ] Next eligible donation date countdown
+- [x] `app/pet/[id].tsx` - Complete pet profile
+- [x] Display eligibility status prominently
+- [x] Show donation history summary
+- [x] Quick actions: Book appointment, View history, Edit
+- [x] Next eligible donation date countdown
 
 ---
 
