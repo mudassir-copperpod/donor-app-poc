@@ -6,6 +6,7 @@ import {
   FlatList,
   TouchableOpacity,
   ActivityIndicator,
+  ScrollView,
 } from 'react-native';
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -152,7 +153,11 @@ export default function FacilitiesScreen() {
           <MaterialIcons name="pets" size={18} color={Colors.primary} />
           <Text style={styles.filterLabel}>Species Accepted</Text>
         </View>
-        <View style={styles.filterButtons}>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.filterScrollContent}
+        >
           <TouchableOpacity
             style={[
               styles.filterButton,
@@ -217,7 +222,135 @@ export default function FacilitiesScreen() {
               Horses
             </Text>
           </TouchableOpacity>
-        </View>
+          <TouchableOpacity
+            style={[
+              styles.filterButton,
+              selectedSpecies === Species.RABBIT && styles.filterButtonActive,
+            ]}
+            onPress={() => setSelectedSpecies(Species.RABBIT)}
+          >
+            <Text
+              style={[
+                styles.filterButtonText,
+                selectedSpecies === Species.RABBIT && styles.filterButtonTextActive,
+              ]}
+            >
+              Rabbits
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.filterButton,
+              selectedSpecies === Species.FERRET && styles.filterButtonActive,
+            ]}
+            onPress={() => setSelectedSpecies(Species.FERRET)}
+          >
+            <Text
+              style={[
+                styles.filterButtonText,
+                selectedSpecies === Species.FERRET && styles.filterButtonTextActive,
+              ]}
+            >
+              Ferrets
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.filterButton,
+              selectedSpecies === Species.GOAT && styles.filterButtonActive,
+            ]}
+            onPress={() => setSelectedSpecies(Species.GOAT)}
+          >
+            <Text
+              style={[
+                styles.filterButtonText,
+                selectedSpecies === Species.GOAT && styles.filterButtonTextActive,
+              ]}
+            >
+              Goats
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.filterButton,
+              selectedSpecies === Species.SHEEP && styles.filterButtonActive,
+            ]}
+            onPress={() => setSelectedSpecies(Species.SHEEP)}
+          >
+            <Text
+              style={[
+                styles.filterButtonText,
+                selectedSpecies === Species.SHEEP && styles.filterButtonTextActive,
+              ]}
+            >
+              Sheep
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.filterButton,
+              selectedSpecies === Species.PIG && styles.filterButtonActive,
+            ]}
+            onPress={() => setSelectedSpecies(Species.PIG)}
+          >
+            <Text
+              style={[
+                styles.filterButtonText,
+                selectedSpecies === Species.PIG && styles.filterButtonTextActive,
+              ]}
+            >
+              Pigs
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.filterButton,
+              selectedSpecies === Species.COW && styles.filterButtonActive,
+            ]}
+            onPress={() => setSelectedSpecies(Species.COW)}
+          >
+            <Text
+              style={[
+                styles.filterButtonText,
+                selectedSpecies === Species.COW && styles.filterButtonTextActive,
+              ]}
+            >
+              Cows
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.filterButton,
+              selectedSpecies === Species.LLAMA && styles.filterButtonActive,
+            ]}
+            onPress={() => setSelectedSpecies(Species.LLAMA)}
+          >
+            <Text
+              style={[
+                styles.filterButtonText,
+                selectedSpecies === Species.LLAMA && styles.filterButtonTextActive,
+              ]}
+            >
+              Llamas
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.filterButton,
+              selectedSpecies === Species.ALPACA && styles.filterButtonActive,
+            ]}
+            onPress={() => setSelectedSpecies(Species.ALPACA)}
+          >
+            <Text
+              style={[
+                styles.filterButtonText,
+                selectedSpecies === Species.ALPACA && styles.filterButtonTextActive,
+              ]}
+            >
+              Alpacas
+            </Text>
+          </TouchableOpacity>
+        </ScrollView>
       </View>
 
       {/* Inventory Filter */}
@@ -408,7 +541,8 @@ const styles = StyleSheet.create({
   searchIcon: {
     position: 'absolute',
     left: Sizes.spacing.md,
-    top: 18,
+    top: '50%',
+    transform: [{ translateY: -10 }],
     zIndex: 1,
   },
   searchInput: {
@@ -420,7 +554,8 @@ const styles = StyleSheet.create({
   clearButton: {
     position: 'absolute',
     right: Sizes.spacing.md,
-    top: 18,
+    top: '50%',
+    transform: [{ translateY: -10 }],
     zIndex: 1,
   },
   filterSection: {
@@ -436,6 +571,10 @@ const styles = StyleSheet.create({
     fontFamily: 'SourceSans3_600SemiBold',
     fontSize: 14,
     color: Colors.text,
+  },
+  filterScrollContent: {
+    gap: Sizes.spacing.sm,
+    paddingRight: Sizes.spacing.lg,
   },
   filterButtons: {
     flexDirection: 'row',

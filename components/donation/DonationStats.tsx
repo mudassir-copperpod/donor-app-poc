@@ -42,18 +42,18 @@ export const DonationStats: React.FC<DonationStatsProps> = ({
   return (
     <View style={styles.container}>
       <View style={styles.row}>
-        <Card variant="elevated" padding="md" style={styles.statCard}>
+        <Card variant="default" padding="md" style={styles.statCard}>
           <Text style={styles.statValue}>{totalDonations}</Text>
           <Text style={styles.statLabel}>Total Donations</Text>
         </Card>
 
-        <Card variant="elevated" padding="md" style={styles.statCard}>
+        <Card variant="default" padding="md" style={styles.statCard}>
           <Text style={styles.statValue}>{totalVolume.toLocaleString()}</Text>
           <Text style={styles.statLabel}>ml Donated</Text>
         </Card>
       </View>
 
-      <Card variant="elevated" padding="md" style={styles.impactCard}>
+      <Card variant="default" padding="md" style={styles.impactCard}>
         <View style={styles.impactContent}>
           <Text style={styles.impactIcon}>❤️</Text>
           <View style={styles.impactText}>
@@ -64,7 +64,7 @@ export const DonationStats: React.FC<DonationStatsProps> = ({
       </Card>
 
       {nextEligibleDate && (
-        <Card variant="elevated" padding="md" style={styles.nextCard}>
+        <Card variant="default" padding="md" style={styles.nextCard}>
           <Text style={styles.nextLabel}>Next Eligible Donation</Text>
           <Text style={styles.nextDate}>{formatDate(nextEligibleDate)}</Text>
           {daysUntil !== null && (
